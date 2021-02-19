@@ -20,7 +20,7 @@ SRCS := $(wildcard src/*.c)
 OBJS := $(SRCS:%=$(BUILD_DIR)/src/%.o)
 
 TEST_MAIN := ./tests/test_main.c
-TEST_SRCS := $(wildcard tests/*.c)
+TEST_SRCS := $(wildcard tests/*.cpp)
 # Por enquanto precisa ser o mesmo nome
 # TEST_OBJS := $(filter-out build/src/$(MAIN_EXEC).c.o, $(OBJS)) \
 						 $(TEST_SRCS:%=$(BUILD_DIR)/tests/%.o)
@@ -63,7 +63,7 @@ $(BUILD_DIR)/$(TESTS_EXEC): $(TEST_OBJS)
 	@$(CXX) $(TEST_OBJS) -o $@
 
 # test sources
-$(BUILD_DIR)/tests/%.c.o: %.c
+$(BUILD_DIR)/tests/%.cpp.o: %.cpp
 	@echo ">> test: Building test source: $<"
 	@echo " > test: Output file: $@\n"
 	@$(MKDIR_P) $(dir $@)
