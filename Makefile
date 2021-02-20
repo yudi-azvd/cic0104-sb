@@ -18,6 +18,9 @@ CXX = g++
 # o Testmate?
 CXXFLAGS = -g
 
+# Mais detalhes sobre depuração no VSCode
+# https://stackoverflow.com/questions/58581500/how-to-fix-debugger-in-vscode-if-you-have-makefile-project-on-c
+
 BUILD_DIR ?= build
 SRC_DIRS ?= src 
 
