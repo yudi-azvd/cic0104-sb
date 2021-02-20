@@ -18,6 +18,12 @@ Para transformar o VSCode em um ambiente de desenvolviemento mais iteressante, v
 
 [Makefile Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.makefile-tools): Intellisense baseado no Makefile do projeto (acho que é isso). Além disso provê também comandos para depuração (mas acho C++ TestMate melhor).
 
+Com **C++ TestMate** você pode ver algo assim:
+
+<img src="./.github/screenshot.png">
+
+Coloque breakpoints e clique em `Debug` para começar a depurar.
+
 ### Nota pra mim mesmo
 Esse `Makefile` cria subpastas desncessárias dentro de `build/`. Tenho
 que arrumar isso.
