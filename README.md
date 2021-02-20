@@ -9,7 +9,7 @@ cd sb-test/
 make
 ```
 
-Para transformar o VSCode em um ambiente de desenvolviemento mais iteressante, você pode usar...
+Para transformar o VSCode em um ambiente de desenvolvimento mais interessante, você pode usar...
 
 ## essas úteis extensões:
 [Test Explorer UI](https://marketplace.visualstudio.com/items?itemName=hbenl.vscode-test-explorer): necessário para o C++ TestMate.
