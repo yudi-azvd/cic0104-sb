@@ -18,12 +18,14 @@ Para transformar o VSCode em um ambiente de desenvolvimento mais interessante, v
 
 [Makefile Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.makefile-tools): Intellisense baseado no Makefile do projeto (acho que é isso). Além disso provê também comandos para depuração (mas acho C++ TestMate melhor).
 
+[Trigger task On Save](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.triggertaskonsave): Desencadear uma tarefa no VSCode quando salvar um tipo de aquivo. As configurações dessa extensão estão em [./.vscode/settings.json](./.vscode/settings.json)
+
 Com **C++ TestMate** você pode ver algo assim:
 
 <img src="./.github/screenshot.png">
 
 Coloque breakpoints e clique em `Debug` para começar a depurar.
 
-### Nota pra mim mesmo
+### Nota pra mim mesmo 
 Esse `Makefile` cria subpastas desncessárias dentro de `build/`. Tenho
 que arrumar isso.
