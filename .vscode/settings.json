@@ -1,0 +1,34 @@
+{
+  "testMate.cpp.test.advancedExecutables": [
+    {
+      "pattern":"{build,Build,BUILD,out,Out,OUT}/**/*{test,Test,TEST}*",
+      "doctest": {
+        "prependTestListingArgs": [
+          "--reporters", "console"
+        ],
+        "prependTestRunningArgs": [
+          "--reporters", "console"
+        ],
+        "debug.enableOutputColouring": true
+      }
+    }
+  ],
+  "C_Cpp.default.configurationProvider": "ms-vscode.makefile-tools",
+  "makefile.launchConfigurations": [
+    {
+      "cwd": "/home/yudi/Documents/programming/estudos/sb-test/build",
+      "binaryPath": "/home/yudi/Documents/programming/estudos/sb-test/build/main",
+      "binaryArgs": []
+    },
+    {
+      "cwd": "/home/yudi/Documents/programming/estudos/sb-test/build",
+      "binaryPath": "/home/yudi/Documents/programming/estudos/sb-test/build/test_exec",
+      "binaryArgs": []
+    }
+  ],
+  // "files.associations": {
+  //   "doctest.h": "cpp",
+  //   "calc.h": "c",
+  //   "ostream": "cpp"
+  // }
+}

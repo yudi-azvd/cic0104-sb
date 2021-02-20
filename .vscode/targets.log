@@ -1,0 +1,515 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.1
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2014 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Sat Feb 20 12:38:27 2021
+
+# Variables
+
+# 'override' directive
+GNUMAKEFLAGS := 
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# automatic
+?F = $(notdir $?)
+# environment
+DESKTOP_SESSION = ubuntu
+# default
+.SHELLFLAGS := -c
+# environment
+SNAP_COMMON = /var/snap/code/common
+# environment
+XDG_SESSION_TYPE = x11
+# environment
+VSCODE_LOG_NATIVE = false
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# environment
+IM_CONFIG_PHASE = 2
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+XAUTHORITY = /run/user/1000/gdm/Xauthority
+# environment
+GDMSESSION = ubuntu
+# environment
+XMODIFIERS = @im=ibus
+# makefile
+CURDIR := /home/yudi/Documents/programming/estudos/sb-test
+# makefile
+SHELL = /bin/sh
+# environment
+SNAP_DATA = /var/snap/code/55
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+# environment
+_ = /snap/code/55/usr/share/code/code
+# environment
+XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
+# environment
+SNAP_INSTANCE_NAME = code
+# environment
+SNAP_ARCH = amd64
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST :=  Makefile
+# environment
+JAVA_HOME = /opt/jdk-13
+# automatic
+@F = $(notdir $@)
+# environment
+GIO_LAUNCHED_DESKTOP_FILE = /var/lib/snapd/desktop/applications/code_code.desktop
+# environment
+USERNAME = yudi
+# makefile (from 'Makefile', line 19)
+CXXFLAGS = -g
+# environment
+MAKELEVEL := 0
+# environment
+MANDATORY_PATH = /usr/share/gconf/ubuntu.mandatory.path
+# environment
+XDG_DATA_DIRS = /usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# makefile (from 'Makefile', line 32)
+TEST_MAIN := ./tests/test_main.c
+# environment
+LC_CTYPE = pt_BR.UTF-8
+# makefile (from 'Makefile', line 30)
+OBJS := build/src/src/calc.c.o build/src/src/main.c.o
+# environment
+CLUTTER_IM_MODULE = xim
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-93eff3db-d421-4877-a4ec-9f3cc8973a2c.sock
+# environment
+LC_NAME = pt_BR.UTF-8
+# makefile (from 'Makefile', line 8)
+MAIN_EXEC = main
+# environment
+GSETTINGS_SCHEMA_DIR = /snap/code/55/usr/share/glib-2.0/schemas
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# environment
+PATH = /home/yudi/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/opt/jdk-13/bin:/opt/jdk-13/bin:/home/yudi/Android/Sdk/tools:/home/yudi/Android/Sdk/platform-tools
+# environment
+GPG_AGENT_INFO = /run/user/1000/gnupg/S.gpg-agent:0:1
+# environment
+SESSION_MANAGER = local/atlas:@/tmp/.ICE-unix/2922,unix/atlas:/tmp/.ICE-unix/2922
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
+# environment
+GDK_PIXBUF_MODULE_FILE = /home/yudi/snap/code/common/.cache/gdk-pixbuf-loaders.cache
+# environment
+TEXTDOMAIN = im-config
+# environment
+SNAP = /snap/code/55
+# environment
+SNAP_VERSION = 622cb03f
+# environment
+XDG_MENU_PREFIX = gnome-
+# environment
+VSCODE_LOG_STACK = false
+# environment
+DISABLE_WAYLAND = 1
+# environment
+VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCode","submitURL":"appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=631a6625-fbff-4971-86ad-5fc70f98b8aa&iid=631a6625-fbff-4971-86ad-5fc70f98b8aa&sid=631a6625-fbff-4971-86ad-5fc70f98b8aa","uploadToServer":true}
+# environment
+GDK_PIXBUF_MODULEDIR = /snap/code/55/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
+# environment
+XDG_SESSION_DESKTOP = ubuntu
+# environment
+SSH_AUTH_SOCK = /tmp/ssh-epmly5nveQEj/agent.2922
+# environment
+GIO_LAUNCHED_DESKTOP_FILE_PID = 4465
+# automatic
+%F = $(notdir $%)
+# makefile (from 'Makefile', line 25)
+SRC_DIRS = src 
+# environment
+DISPLAY = :0
+# environment
+GTK_IM_MODULE = ibus
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+SNAP_INSTANCE_KEY = 
+# environment
+PWD = /home/yudi/Documents/programming/estudos/sb-test
+# makefile (from 'Makefile', line 39)
+TEST_OBJS := build/src/src/calc.c.o build/tests/tests/test_main.cpp.o build/tests/tests/test_a.cpp.o build/tests/tests/test_b.cpp.o
+# environment
+XDG_SEAT = seat0
+# environment
+SSH_AGENT_PID = 3001
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
+# environment
+GTK_MODULES = gail:atk-bridge
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
+# environment
+HOME = /home/yudi
+# environment
+VSCODE_CLI = 1
+# environment
+LOGNAME = yudi
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# environment
+SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd/void
+# environment
+SNAP_CONTEXT = rdGKzjY6KYHGK_el27Xg4TP-3pbOoNH3dtvpJg_8kNj6dJ0HBCfM
+# automatic
++F = $(notdir $+)
+# environment
+SNAP_USER_COMMON = /home/yudi/snap/code/common
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+MAKE_VERSION := 4.1
+# environment
+GNOME_DESKTOP_SESSION_ID = this-is-deprecated
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+XDG_VTNR = 2
+# environment
+LC_TIME = pt_BR.UTF-8
+# environment
+SNAP_REAL_HOME = /home/yudi
+# default
+MAKE = $(MAKE_COMMAND)
+# default
+MAKECMDGOALS := all
+# environment
+QT_IM_MODULE = ibus
+# makefile (from 'Makefile', line 29)
+SRCS := src/calc.c src/main.c
+# environment
+SNAP_USER_DATA = /home/yudi/snap/code/55
+# environment
+SHLVL = 1
+# environment
+GNOME_SHELL_SESSION_MODE = ubuntu
+# makefile (from 'Makefile', line 24)
+BUILD_DIR = build
+# environment
+XDG_SESSION_ID = 2
+# environment
+USER = yudi
+# environment
+SNAP_REVISION = 55
+# environment
+LC_MONETARY = pt_BR.UTF-8
+# makefile
+.DEFAULT_GOAL := all
+# environment
+XDG_CURRENT_DESKTOP = Unity
+# environment
+CLASSPATH = :/home/yudi/.algs4/algs4.jar
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+LC_TELEPHONE = pt_BR.UTF-8
+# default
+MAKE_COMMAND := make
+# environment
+VSCODE_NODE_CACHED_DATA_DIR = /home/yudi/.config/Code/CachedData/622cb03f7e070a9670c94bae1a45d78d7181fbd4
+# default
+.VARIABLES := 
+# makefile (from 'Makefile', line 10)
+TESTS_EXEC = test_exec
+# automatic
+*F = $(notdir $*)
+# environment
+VSCODE_IPC_HOOK = /run/user/1000/vscode-7f973f9a-1.53.2-main.sock
+# environment
+BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code_code.desktop
+# makefile
+MAKEFLAGS = pqrR
+# environment
+MFLAGS = -pqrR
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+BREAKPAD_DUMP_LOCATION = /home/yudi/.config/Code/exthost Crash Reports
+# makefile (from 'Makefile', line 27)
+MAIN := src/main.c
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+LC_PAPER = pt_BR.UTF-8
+# environment
+LC_IDENTIFICATION = pt_BR.UTF-8
+# makefile (from 'Makefile', line 33)
+TEST_SRCS := tests/test_main.cpp tests/test_a.cpp tests/test_b.cpp
+# environment
+QT_ACCESSIBILITY = 1
+# environment
+DEFAULTS_PATH = /usr/share/gconf/ubuntu.default.path
+# environment
+TEXTDOMAINDIR = /usr/share/locale/
+# default
+MAKEFILES := 
+# environment
+SNAP_COOKIE = rdGKzjY6KYHGK_el27Xg4TP-3pbOoNH3dtvpJg_8kNj6dJ0HBCfM
+# environment
+LC_NUMERIC = pt_BR.UTF-8
+# automatic
+<F = $(notdir $<)
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# makefile (from 'Makefile', line 12)
+CXX = g++
+# environment
+LC_MEASUREMENT = pt_BR.UTF-8
+# environment
+SNAP_NAME = code
+# makefile (from 'Makefile', line 89)
+MKDIR_P = mkdir -p
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+ 
+# environment
+QT4_IM_MODULE = xim
+# environment
+GJS_DEBUG_TOPICS = JS ERROR;JS LOG
+# automatic
+^F = $(notdir $^)
+# default
+SUFFIXES := 
+# environment
+SNAP_REEXEC = 
+# environment
+CHROME_DESKTOP = code-url-handler.desktop
+# environment
+WINDOWPATH = 2
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# environment
+GJS_DEBUG_OUTPUT = stderr
+# default
+.RECIPEPREFIX := 
+# environment
+LC_ADDRESS = pt_BR.UTF-8
+# environment
+LANG = en_US.UTF-8
+# environment
+ANDROID_HOME = /home/yudi/Android/Sdk
+# environment
+VSCODE_PID = 4503
+# variable set hash-table stats:
+# Load=147/1024=14%, Rehash=0, Collisions=38/200=19%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 2054, inode 312436): 13 files, no impossibilities.
+# src (device 2054, inode 312454): 4 files, no impossibilities.
+# tests (device 2054, inode 312462): 5 files, no impossibilities.
+
+# 22 files, no impossibilities in 3 directories.
+
+# Implicit Rules
+
+build/src/%.c.o: %.c
+#  recipe to execute (from 'Makefile', line 59):
+	@echo " >> main: Building source file: $<"
+	@echo "  > main: Output file: $@\n"
+	@$(MKDIR_P) $(dir $@)
+	@$(CXX) $(CXXFLAGS) -c $< -o $@
+
+build/tests/%.cpp.o: %.cpp
+#  recipe to execute (from 'Makefile', line 77):
+	@echo ">> test: Building test source: $<"
+	@echo " > test: Output file: $@\n"
+	@$(MKDIR_P) $(dir $@)
+	@$(CXX) $(CXXFLAGS) -c $< -o $@
+
+# 2 implicit rules, 0 (0,0%) terminal.
+
+# Files
+
+build/test_exec: build/src/src/calc.c.o build/tests/tests/test_main.cpp.o build/tests/tests/test_a.cpp.o build/tests/tests/test_b.cpp.o
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 72):
+	@echo ">> test: Building TEST executable $@"
+	@$(CXX) $(CXXFLAGS) $(TEST_OBJS) -o $@
+
+build/main: build/src/src/calc.c.o build/src/src/main.c.o src/main.c
+#  Implicit rule search has not been done.
+#  Last modified 2021-02-20 12:34:48.144856236
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 54):
+	@echo ">>> main: Building executable"
+	@$(CXX) $(CXXFLAGS) $(OBJS) -o $@
+
+all: main tests
+#  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/3=0%
+
+.PHONY: clean test main
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/calc.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-02-15 12:40:59.603611637
+#  File has been updated.
+#  Successfully updated.
+
+tests: build/test_exec
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 69):
+	@echo " > test: Build done"
+
+# Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2021-02-20 12:34:43.324742634
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+build/tests/tests/test_main.cpp.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+test:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+src/main.c:
+#  Implicit rule search has been done.
+#  Last modified 2021-02-19 00:56:42.84635973
+#  File has been updated.
+#  Successfully updated.
+
+build/src/src/calc.c.o: src/calc.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'src/calc'
+#  Last modified 2021-02-20 12:34:48.064854354
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 59):
+	@echo " >> main: Building source file: $<"
+	@echo "  > main: Output file: $@\n"
+	@$(MKDIR_P) $(dir $@)
+	@$(CXX) $(CXXFLAGS) -c $< -o $@
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 86):
+	rm -fr $(BUILD_DIR)/* $(MAIN_EXEC) $(TESTS_EXEC)
+
+# Not a target:
+build/tests/tests/test_a.cpp.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+main: build/main
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := main
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+# + := build/main
+# automatic
+# | := 
+# automatic
+# < := build/main
+# automatic
+# ^ := build/main
+# automatic
+# ? := build/main
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/13=8%
+#  recipe to execute (from 'Makefile', line 50):
+	@echo "  > main: Done $@ => $<"
+	@echo "--------------------------\n"
+
+build/src/src/main.c.o: src/main.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'src/main'
+#  Last modified 2021-02-20 12:34:48.104855295
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 59):
+	@echo " >> main: Building source file: $<"
+	@echo "  > main: Output file: $@\n"
+	@$(MKDIR_P) $(dir $@)
+	@$(CXX) $(CXXFLAGS) -c $< -o $@
+
+# Not a target:
+build/tests/tests/test_b.cpp.o:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# files hash-table stats:
+# Load=18/1024=2%, Rehash=0, Collisions=0/55=0%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 42 / storage = 474 B / avg = 11 B
+# current buf: size = 8162 B / used = 474 B / count = 42 / avg = 11 B
+
+# strcache performance: lookups = 72 / hit rate = 41%
+# hash-table stats:
+# Load=42/8192=1%, Rehash=0, Collisions=3/72=4%
+# Finished Make data base on Sat Feb 20 12:38:27 2021
+
+ 
