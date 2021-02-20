@@ -16,9 +16,9 @@ Para transformar o VSCode em um ambiente de desenvolvimento mais interessante, v
 
 **[C++ TestMate](https://marketplace.visualstudio.com/items?itemName=matepek.vscode-catch2-test-adapter)**: habilita code lens para depuração usando o depurador do VSCode.
 
-[Makefile Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.makefile-tools): Intellisense baseado no Makefile do projeto (acho que é isso). Além disso provê também comandos para depuração (mas acho C++ TestMate melhor).
+[Makefile Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.makefile-tools): intellisense baseado no Makefile do projeto (acho que é isso). Além disso provê também comandos para depuração (mas acho C++ TestMate melhor).
 
-[Trigger task On Save](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.triggertaskonsave): Desencadear uma tarefa no VSCode quando salvar um tipo de aquivo. As configurações dessa extensão estão em [./.vscode/settings.json](./.vscode/settings.json)
+[Trigger task On Save](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.triggertaskonsave): desencadea uma tarefa no VSCode quando salvar um tipo de aquivo. As configurações dessa extensão estão em [./.vscode/settings.json](./.vscode/settings.json)
 
 Com **C++ TestMate** você pode ver algo assim:
 
