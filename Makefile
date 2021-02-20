@@ -11,6 +11,13 @@ TESTS_EXEC ?= test_exec
 
 CXX = g++
 
+# Foi assistindo esse cara que consegui
+# https://www.youtube.com/watch?v=9VpiGwp8Vos
+# Como eu faria pra tirar -g para o código em produção?
+# Mas como que no projeto da calculadora eu não uso -g e ainda consigo depurar c
+# o Testmate?
+CXXFLAGS = -g
+
 BUILD_DIR ?= build
 SRC_DIRS ?= src 
 
@@ -60,14 +67,14 @@ tests: $(BUILD_DIR)/$(TESTS_EXEC)
 
 $(BUILD_DIR)/$(TESTS_EXEC): $(TEST_OBJS)
 	@echo ">> test: Building TEST executable $@"
-	@$(CXX) $(TEST_OBJS) -o $@
+	@$(CXX) $(CXXFLAGS) $(TEST_OBJS) -o $@
 
 # test sources
 $(BUILD_DIR)/tests/%.cpp.o: %.cpp
 	@echo ">> test: Building test source: $<"
 	@echo " > test: Output file: $@\n"
 	@$(MKDIR_P) $(dir $@)
-	@$(CXX) -c $< -o $@
+	@$(CXX) $(CXXFLAGS) -c $< -o $@
 
 
 .PHONY: clean test main

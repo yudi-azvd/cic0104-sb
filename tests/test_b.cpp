@@ -11,7 +11,7 @@ TEST_CASE("Another test file") {
     CHECK(factorial(1) == 1);
     CHECK(sum_ints(1, 1) == 2);
 
-    std::cout << "Hello world" << std::endl;
+    // std::cout << "Hello wwworld" << std::endl;
 
     CHECK("essa string" != "dessa outr string");
 }
