@@ -52,14 +52,14 @@ main: $(BUILD_DIR)/$(MAIN_EXEC)
 
 $(BUILD_DIR)/$(MAIN_EXEC): $(OBJS) $(MAIN) # 
 	@echo ">>> main: Building executable"
-	@$(CXX) $(OBJS) -o $@
+	@$(CXX) $(CXXFLAGS) $(OBJS) -o $@
 
 # c source
 $(BUILD_DIR)/src/%.c.o: %.c
 	@echo " >> main: Building source file: $<"
 	@echo "  > main: Output file: $@\n"
 	@$(MKDIR_P) $(dir $@)
-	@$(CXX) -c $< -o $@
+	@$(CXX) $(CXXFLAGS) -c $< -o $@
 
 
 ####################################

@@ -6,5 +6,5 @@ int factorial_a(int number) { return number <= 1 ? number : factorial_a(number -
 
 TEST_CASE("testing the factorial function") {
     CHECK(factorial_a(1) == 1);
-    CHECK(sum_ints(1, 1) == 2);
+    CHECK(sum_ints(1, 2) == 3);
 }
