@@ -1,18 +1,4 @@
 {
-  "testMate.cpp.test.advancedExecutables": [
-    {
-      "pattern":"{build,Build,BUILD,out,Out,OUT}/**/*{test,Test,TEST}*",
-      "doctest": {
-        "prependTestListingArgs": [
-          "--reporters", "console"
-        ],
-        "prependTestRunningArgs": [
-          "--reporters", "console"
-        ],
-        "debug.enableOutputColouring": true
-      }
-    }
-  ],
   "C_Cpp.default.configurationProvider": "ms-vscode.makefile-tools",
   "makefile.launchConfigurations": [
     {
@@ -29,6 +15,7 @@
   "triggerTaskOnSave.on": true,
   "triggerTaskOnSave.tasks": {
     "Build tests": [ // Nome da tarefa a ser desencadeada
+      "src/!main.c",
       "src/*.c",
       "tests/*.cpp"
     ]

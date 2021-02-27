@@ -52,9 +52,9 @@
       "presentation": {
         "echo": false,
         "reveal": "always",
-        "focus": false,
-        "panel": "shared",
-        "showReuseMessage": false,
+        // "focus": true,
+        "panel": "dedicated",
+        // "showReuseMessage": false,
         "clear": true
       },
       "command": "make tests",

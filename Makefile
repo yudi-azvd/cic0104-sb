@@ -5,6 +5,7 @@
 
 ## É aconselhável que o nome do target seja diferente do nome do arquivo
 
+# Deve mesmo nome do arquivo com a função main
 MAIN_EXEC ?= main
 
 TESTS_EXEC ?= test_exec
@@ -24,20 +25,13 @@ CXXFLAGS = -g
 BUILD_DIR ?= build
 SRC_DIRS ?= src 
 
-MAIN := src/$(MAIN_EXEC).c
-# MAIN := src/main.c
-SRCS := $(wildcard src/*.c)
-OBJS := $(SRCS:%=$(BUILD_DIR)/src/%.o)
+MAIN := src/$(MAIN_EXEC).cpp
+SRCS := $(wildcard src/*.cpp)
+OBJS := $(SRCS:%=$(BUILD_DIR)/%.o)
 
-TEST_MAIN := ./tests/test_main.c
-TEST_SRCS := $(wildcard tests/*.cpp)
-# Por enquanto precisa ser o mesmo nome
-# TEST_OBJS := $(filter-out build/src/$(MAIN_EXEC).c.o, $(OBJS)) \
-						 $(TEST_SRCS:%=$(BUILD_DIR)/tests/%.o)
-
-##                              src/src???
-TEST_OBJS := $(filter-out build/src/src/$(MAIN_EXEC).c.o, $(OBJS)) \
-						 $(TEST_SRCS:%=$(BUILD_DIR)/tests/%.o)
+TEST_SRCS := $(wildcard tests/*.test.cpp)
+TEST_OBJS := $(filter-out build/src/$(MAIN_EXEC).cpp.o, $(OBJS)) \
+						 $(TEST_SRCS:tests/% = $(BUILD_DIR)/tests/%.o)
 
 
 all: main tests
@@ -48,15 +42,15 @@ all: main tests
 ####################################
 main: $(BUILD_DIR)/$(MAIN_EXEC) 
 	@echo "  > main: Done $@ => $<"
-	@echo "--------------------------\n"
+	@echo "  ------------------------\n"
 
-$(BUILD_DIR)/$(MAIN_EXEC): $(OBJS) $(MAIN) # 
+$(BUILD_DIR)/$(MAIN_EXEC): $(OBJS) $(MAIN)
 	@echo ">>> main: Building executable"
 	@$(CXX) $(CXXFLAGS) $(OBJS) -o $@
 
-# c source
-$(BUILD_DIR)/src/%.c.o: %.c
-	@echo " >> main: Building source file: $<"
+# cpp sources
+$(BUILD_DIR)/%.cpp.o: %.cpp
+	@echo " >> main: Building source file: $< | | match: $*"
 	@echo "  > main: Output file: $@\n"
 	@$(MKDIR_P) $(dir $@)
 	@$(CXX) $(CXXFLAGS) -c $< -o $@
@@ -73,8 +67,8 @@ $(BUILD_DIR)/$(TESTS_EXEC): $(TEST_OBJS)
 	@$(CXX) $(CXXFLAGS) $(TEST_OBJS) -o $@
 
 # test sources
-$(BUILD_DIR)/tests/%.cpp.o: %.cpp
-	@echo ">> test: Building test source: $<"
+$(BUILD_DIR)/tests/%.test.cpp.o: tests/%.test.cpp
+	@echo ">> test: Building test source: $< | match: $*"
 	@echo " > test: Output file: $@\n"
 	@$(MKDIR_P) $(dir $@)
 	@$(CXX) $(CXXFLAGS) -c $< -o $@
