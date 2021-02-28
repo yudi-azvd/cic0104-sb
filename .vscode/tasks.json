@@ -51,7 +51,7 @@
       "type": "shell",
       "presentation": {
         "echo": false,
-        "reveal": "always",
+        "reveal": "silent",
         // "focus": true,
         "panel": "dedicated",
         // "showReuseMessage": false,
