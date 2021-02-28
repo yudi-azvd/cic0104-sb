@@ -31,7 +31,9 @@ OBJS := $(SRCS:%=$(BUILD_DIR)/%.o)
 
 TEST_SRCS := $(wildcard tests/*.test.cpp)
 TEST_OBJS := $(filter-out build/src/$(MAIN_EXEC).cpp.o, $(OBJS)) \
-						 $(TEST_SRCS:tests/% = $(BUILD_DIR)/tests/%.o)
+						 $(TEST_SRCS:%=$(BUILD_DIR)/%.o) # Não pode colocar espaços ao redor do =
+# Outro jeito de diferenciar obj de src/ dos objs de tests/ sem usar .test.cpp
+#            $(TEST_SRCS:tests/% = $(BUILD_DIR)/tests/%.o)
 
 
 all: main tests
@@ -45,13 +47,13 @@ main: $(BUILD_DIR)/$(MAIN_EXEC)
 	@echo "  ------------------------\n"
 
 $(BUILD_DIR)/$(MAIN_EXEC): $(OBJS) $(MAIN)
-	@echo ">>> main: Building executable"
+	@echo ">> main: Building executable"
 	@$(CXX) $(CXXFLAGS) $(OBJS) -o $@
 
 # cpp sources
 $(BUILD_DIR)/%.cpp.o: %.cpp
-	@echo " >> main: Building source file: $< | | match: $*"
-	@echo "  > main: Output file: $@\n"
+	@echo ">> main: Building source file: $< | | match: $*"
+	@echo " > main: Output file: $@\n"
 	@$(MKDIR_P) $(dir $@)
 	@$(CXX) $(CXXFLAGS) -c $< -o $@
 
@@ -67,7 +69,8 @@ $(BUILD_DIR)/$(TESTS_EXEC): $(TEST_OBJS)
 	@$(CXX) $(CXXFLAGS) $(TEST_OBJS) -o $@
 
 # test sources
-$(BUILD_DIR)/tests/%.test.cpp.o: tests/%.test.cpp
+# $(BUILD_DIR)/tests/%.test.cpp.o: tests/%.test.cpp
+$(BUILD_DIR)/%.test.cpp.o: %.test.cpp
 	@echo ">> test: Building test source: $< | match: $*"
 	@echo " > test: Output file: $@\n"
 	@$(MKDIR_P) $(dir $@)
