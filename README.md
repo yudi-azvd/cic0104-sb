@@ -1,31 +1,23 @@
-# Makefile teste
-Spin-off de outro [repositório](https://github.com/yudi-azvd/make-tutorial). Makefile para um projeto C++ com testes unitários. Esse `Makefile` foi feito para ambiente Unix. Só testei no Ubuntu e no WSL.
+# Software Básico
+Repositório para a disciplina de Software Básico da Universidade de Brasília. Segundo o professor, um nome melhor para a disciplina seria Software de Sistemas.
+
+<div style="text-align: center;" >
+  <img width="460" src="./.github/sb-big-picture.png">
+</div>
 
 
-## Começando
-```sh
-git clone https://github.com/yudi-azvd/sb-test
-cd sb-test/
-make
-```
+## Makefile teste
+Spin-off de outro [repositório](./makefile-teste) com Makfile e
+plugins para VSCode.
 
-Para transformar o VSCode em um ambiente de desenvolvimento mais interessante, você pode usar...
 
-## essas úteis extensões:
-[Test Explorer UI](https://marketplace.visualstudio.com/items?itemName=hbenl.vscode-test-explorer): necessário para o C++ TestMate.
+## Exercícios futuros
 
-**[C++ TestMate](https://marketplace.visualstudio.com/items?itemName=matepek.vscode-catch2-test-adapter)**: habilita code lens para depuração usando o depurador do VSCode.
+_Essa lista vai virar issue ou alguma coisa lá no montador._
 
-[Makefile Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.makefile-tools): intellisense baseado no Makefile do projeto (acho que é isso). Além disso provê também comandos para depuração (mas acho C++ TestMate melhor).
+- [ ] Implementar algoritmo de duas passagens
+  - [ ] primeira passagem
+  - [ ] segunda passagem
 
-[Trigger task On Save](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.triggertaskonsave): desencadea uma tarefa no VSCode quando salvar um tipo de aquivo. As configurações dessa extensão estão em [./.vscode/settings.json](./.vscode/settings.json)
-
-Com **C++ TestMate** você pode ver algo assim:
-
-<img src="./.github/screenshot.png">
-
-Coloque breakpoints e clique em `Debug` para começar a depurar.
-
-### Nota pra mim mesmo 
-Esse `Makefile` cria subpastas desncessárias dentro de `build/`. Tenho
-que arrumar isso.
+- [ ] Implementar passagem única com lista de pendências na tabela de símbolos
+- [ ] Implementar passagem única com lista de pendências dentro do código final (?)
