@@ -7,8 +7,7 @@ Repositório para a disciplina de Software Básico da Universidade de Brasília.
 
 
 ## Makefile teste
-Spin-off de outro [repositório](./makefile-teste) com Makfile e
-plugins para VSCode.
+[Makefile](./makefile-teste.md) para um projeto C/C++ com testes unitários com dicas adicionais para configurar o VSCode como um ambiente de desenvolvimento.
 
 
 ## Exercícios futuros
