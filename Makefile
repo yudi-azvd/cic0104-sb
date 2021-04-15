@@ -69,7 +69,6 @@ $(BUILD_DIR)/$(TESTS_EXEC): $(TEST_OBJS)
 	@$(CXX) $(CXXFLAGS) $(TEST_OBJS) -o $@
 
 # test sources
-# $(BUILD_DIR)/tests/%.test.cpp.o: tests/%.test.cpp
 $(BUILD_DIR)/%.test.cpp.o: %.test.cpp
 	@echo ">> test: Building test source: $< | match: $*"
 	@echo " > test: Output file: $@\n"

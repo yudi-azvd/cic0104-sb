@@ -20,9 +20,4 @@
       "tests/*.cpp"
     ]
   },
-  "files.associations": {
-    ".sequelizerc": "javascript",
-    ".prettierrc": "json",
-    "iosfwd": "cpp"
-  }
 }
