@@ -4,3 +4,6 @@ build/**
 
 *.o
 *.out
+
+asm_files/*
+!asm_files/*.asm
