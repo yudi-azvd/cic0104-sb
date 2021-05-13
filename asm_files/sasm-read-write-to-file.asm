@@ -17,22 +17,28 @@ section .data
   newline:          db 0ah
   NEWLINE_SZ:       equ $-newline
 
-  %assign chars_length 6
-  n: db chars_length            ; qtd de char a serem lidos do arquivo
-  x: times chars_length db 0    ; vetor com chars_length de comprimento
-  buffer: times 10 db 0
+  %assign chars_length 5
+  n:            db chars_length            ; qtd de char a serem lidos do arquivo
+  x:            times chars_length db 0    ; vetor com chars_length de comprimento
+  buffer:       times 10 db 0
+  BUFFER_SZ:    equ $-buffer
 
 ; Para dados não inicicializados
 section .bss
   in_fd: resd 1
   out_fd: resd 1
 
-; %include "io.inc"
-section .text
-  global _start
+%include "io.inc"
 
-_start:
+section .text
+global CMAIN
+
+section .text
+
+CMAIN:
+    mov ebp, esp; for correct debugging
 open_in_file:
+  mov eax, BUFFER_SZ
   mov eax, 5            ; abrir arquivo. acho que o arquivo já deve existir
   mov ebx, inFilename   ; nome do arquivo
   mov ecx, 0            ; file permissions: RONLY
@@ -49,15 +55,6 @@ read_chars_into_x:
   mov edx, chars_length ; ler apenas chars_length bytes e salvar em chars
   int 80h               ; syscall
 
-print_x:
-  mov eax, 4
-  mov ebx, 1
-  mov ecx, x
-  mov edx, chars_length
-  int 80h
-  call print_newline
-
-
 close_in_file:
   mov eax, 6    ; SYS_CLOSE
   mov ebx, [in_fd]
@@ -70,7 +67,7 @@ do_sum:
   xor eax, eax    ; zerar eax para ser o acumulador
 repeat:
   movzx edx, byte[ebx]
-  add eax, edx  ; eax += esi[]
+  add eax, edx  ; eax += byte ebx[i]
   inc ebx
   dec ecx
   jnz repeat     ; while (--ecx)
@@ -91,32 +88,34 @@ int_to_string:
   mov eax, esi
   ; ret
 
-print_sum:
-  mov eax, 4
-  mov ebx, 1
-  mov ecx, buffer
-  mov edx, 10
-  int 80h
-  call print_newline
 
 open_out_file:
   mov eax, 8            ; criar/abrir arquivo
   mov ebx, outFilename  ;
   mov ecx, 0666o        ; todos rwx
-  ; mov ecx, 0700o        ; apenas dono tem rxw, para a prova
+  ; mov ecx, 07000o        ; apenas dono tem rxw, para a prova
   int 80h
   mov [out_fd], eax     ; guardar file descriptor
 write_to_file:
-  mov eax, 4            ; escrever em arquivo
-  mov ebx, [out_fd]
-  mov ecx, buffer
-  mov edx, 11            ; escreve 1 byte, que tá em chars
-  int 80h
+   mov eax, 4            ; escrever em arquivo
+   mov ebx, [out_fd]
+   mov ecx, buffer
+   mov edx, BUFFER_SZ
+   int 80h
 
 close_out_file:
   mov eax, 6    ; SYS_CLOSE
   mov ebx, [out_fd]
   int 80h
+ 
+print_BUFFER:
+  mov eax, 4
+  mov ebx, 1
+  mov ecx, buffer
+  mov edx, BUFFER_SZ
+  int 80h
+  call print_newline
+
 
 end_program:
   mov eax, 1
@@ -130,5 +129,3 @@ print_newline:
   mov edx, NEWLINE_SZ
   int 80h
   ret
-
-

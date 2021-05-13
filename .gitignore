@@ -7,3 +7,5 @@ build/**
 
 asm_files/*
 !asm_files/*.asm
+!asm_files/*.c
+!asm_files/*.txt

@@ -8,7 +8,15 @@ Sistemas.
 </div>
 
 
+## Assembly Intel
+É necessário ter o [NASM](https://www.nasm.us/) instalado na sua máquina.
+
+
+```sh
+nasm -f elf program.asm -o program.o
+ld -m elf_i386 -o program program.o
+```
+
 ## Makefile teste
 [Makefile](./makefile-teste.md) para um projeto C/C++ com testes unitários com 
 dicas adicionais para configurar o VSCode como um ambiente de desenvolvimento.
-
