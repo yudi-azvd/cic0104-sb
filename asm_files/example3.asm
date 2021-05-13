@@ -1,3 +1,8 @@
+; Para compilar esse programa em um PC de 64bits:
+; nasm -f elf example3.asm -o example3.o
+; ld -m elf_i386 -o example3 example3.o
+
+
 ; dados inicializados
           section .data
 name_msg:     db  "Please enter your name: "
@@ -8,7 +13,7 @@ confirm_msg1: db  "Repeat welcome message"
 CONF1SIZE:    equ $-confirm_msg1
 confirm_msg2: db  "times? (y/n)"
 CONF2SIZE:    equ $-confirm_msg2
-welcome_msg:  db  "welcome to Assembly Language Programming "
+welcome_msg:  db  "welcome to Assembly Language Programming, "
 WELCSIZE:     equ $-welcome_msg
 newline:      db  0dh, 0ah
 NEWLSIZE:     equ $-newline
@@ -50,7 +55,7 @@ ask_count:
                       ; soh funciona quando tem um unico digito
 
 display_msg:
-  push rcx ; ecx para arq 32bits
+  push ecx ; ecx para arquitetura 32bits
   mov eax, 4
   mov ebx, 1
   mov ecx, welcome_msg
@@ -66,10 +71,8 @@ display_msg:
   mov ecx, newline
   mov edx, NEWLSIZE
   int 80h
-  pop rcx ; ecx para arq 32bits
+  pop ecx ; ecx para arq 32bits
   loop display_msg ; decrementa ecx sozinho
   mov eax, 1
   mov ebx, 0
   int 80h
-
-
